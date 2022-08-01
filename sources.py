@@ -14,7 +14,15 @@
 #   T1037 , Active Directory
 #   .....
 #
-#   This script parses the MITRE ATT&CK data dictionary to retrieve the datasources
+#   This script parses the MITRE ATT&CK data dictionary to retrieve the datasources.  
+#   Where there are multiple sources sited for a given technique, this script will split
+#   the into individual lines.
+#
+#   How many techniques spanning a few data sources?
+#     python3 ./sources.py|grep -E 'Process|File|Command|Registry'|cut -f1 -d","|sort|uniq|wc -l
+#
+#   How many techniques have a source mapping?
+#     python3 ./sources.py|cut -f1 -d","|sort|uniq|wc -l
 
 import json
 
