@@ -54,7 +54,7 @@ for i in jsonData["objects"]:
             dataSources = i['x_mitre_data_sources']
         else:
             result["dataSources"] = "None"
-        for ds in dataSources:
+        for ds in dataSources:  # Some techniques have a list containing multiple datasources
             result["dataSources"] = ds
             result["dataSourcesShort"] = ds.split(':')[0]
             finalResults.append(result)
