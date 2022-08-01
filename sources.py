@@ -20,9 +20,12 @@
 #
 #   How many techniques spanning a few data sources?
 #     python3 ./sources.py|grep -E 'Process|File|Command|Registry'|cut -f1 -d","|sort|uniq|wc -l
-#
+#  
 #   How many techniques have a source mapping?
 #     python3 ./sources.py|cut -f1 -d","|sort|uniq|wc -l
+#
+#   Regarding the above, Process|File|Command|Registry data spans 248 of the 380 total techniques.  That's 65%!
+#
 
 import json
 
